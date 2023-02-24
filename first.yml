@@ -1,0 +1,38 @@
+# Lets write the program
+
+courses:
+  course_name: "PL/SQL"
+  version: 1.0
+  price: $myprice 199
+  is_public: true
+  release_date: 2023-02-12
+  pre_enrol: null
+  tags:
+    - python 
+    - web developer
+    - mysql
+  course_ta: ["Anirudh","Anurag","Mukesh"]
+  ta_details:
+    - name: "Anirudh"
+      email: "abc@org.com"
+      role: "content admin"
+    - name: "Chandan"
+      email: "chandan@chandan.com"
+      role: "TM"
+    - { name: "Rakesh", email: "abc@google.com", role: "deveops"} ## above and this is same only 
+
+  short_desc: > 
+    here is description about This Yaml file 
+  long_desc: |
+    This is 
+    for long 
+    desc
+  process_payment: *price
+
+  adv: &adv
+    mykey: myval
+  
+  another_adv:
+    one: two
+    <<: *adv
+
